@@ -1,0 +1,1158 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;json&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="json">json</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#floors" class="toc-h1 toc-link" data-title="Floors">Floors</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-floors" class="toc-h2 toc-link" data-title="Post Floors">Post Floors</a>
+                  </li>
+                  <li>
+                    <a href="#delete-floors" class="toc-h2 toc-link" data-title="Delete Floors">Delete Floors</a>
+                  </li>
+                  <li>
+                    <a href="#get-floors" class="toc-h2 toc-link" data-title="Get Floors">Get Floors</a>
+                  </li>
+                  <li>
+                    <a href="#sync-floors" class="toc-h2 toc-link" data-title="Sync Floors">Sync Floors</a>
+                  </li>
+                  <li>
+                    <a href="#response-floors" class="toc-h2 toc-link" data-title="Response Floors">Response Floors</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#rooms" class="toc-h1 toc-link" data-title="Rooms">Rooms</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-rooms" class="toc-h2 toc-link" data-title="Post Rooms">Post Rooms</a>
+                  </li>
+                  <li>
+                    <a href="#delete-rooms" class="toc-h2 toc-link" data-title="Delete Rooms">Delete Rooms</a>
+                  </li>
+                  <li>
+                    <a href="#get-rooms" class="toc-h2 toc-link" data-title="Get Rooms">Get Rooms</a>
+                  </li>
+                  <li>
+                    <a href="#sync-rooms" class="toc-h2 toc-link" data-title="Sync Rooms">Sync Rooms</a>
+                  </li>
+                  <li>
+                    <a href="#response-rooms" class="toc-h2 toc-link" data-title="Response Rooms">Response Rooms</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#groups" class="toc-h1 toc-link" data-title="Groups">Groups</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#post-groups" class="toc-h2 toc-link" data-title="Post Groups">Post Groups</a>
+                  </li>
+                  <li>
+                    <a href="#delete-groups" class="toc-h2 toc-link" data-title="Delete Groups">Delete Groups</a>
+                  </li>
+                  <li>
+                    <a href="#get-groups" class="toc-h2 toc-link" data-title="Get Groups">Get Groups</a>
+                  </li>
+                  <li>
+                    <a href="#sync-groups" class="toc-h2 toc-link" data-title="Sync Groups">Sync Groups</a>
+                  </li>
+                  <li>
+                    <a href="#response-groups" class="toc-h2 toc-link" data-title="Response Groups">Response Groups</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+
+<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+
+<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+
+<p><h1 id='floors'>Floors</h1><h2 id='post-floors'>Post Floors</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Creating new floor:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;post&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;floors&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;2nd floor&quot;</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565866950330-114&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Updating current floors&#39; order</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;post&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;floors&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="mi">1</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="mi">2</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="mi">3</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565866950330-114&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses for creating new floors or updating current floors. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>floorid</td>
+<td>string</td>
+<td>Floor identifier, omitted when creating new floor.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Floor name, required when creating new floor.</td>
+</tr>
+<tr>
+<td>order</td>
+<td>int</td>
+<td>Floor order (optional).</td>
+</tr>
+</tbody></table>
+<h2 id='delete-floors'>Delete Floors</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Delete 2 floors:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;delete&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565866950330-114&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;floors&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">&quot;u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW&quot;</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to delete specified floors whose floorid match data member. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h2 id='get-floors'>Get Floors</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Get 2 floors:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565866950330-114&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;floors&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">&quot;u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW&quot;</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to get specified floors&#39; information whose floorid match data member. Get entire <code>floors</code> data if <code>data</code> is empty. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h2 id='sync-floors'>Sync Floors</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Sync floors</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;sync&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;floors&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;1st floor&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="mi">1</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Basement&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="mi">2</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;2nd floor&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="mi">3</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="s2">&quot;versions&quot;</span><span class="p">:</span><span class="mi">67</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565866950330-114&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to sync entire <code>floors</code> data. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>floorid</td>
+<td>string</td>
+<td>Floor identifier, required.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Floor name, required.</td>
+</tr>
+<tr>
+<td>order</td>
+<td>int</td>
+<td>Floor order (optional).</td>
+</tr>
+</tbody></table>
+<h2 id='response-floors'>Response Floors</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Response floors</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;response&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;floors&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;1st floor&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="mi">1</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="s2">&quot;versions&quot;</span><span class="p">:</span><span class="mi">67</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565866950330-114&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to sync part of <code>floors</code> database. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>floorid</td>
+<td>string</td>
+<td>Floor identifier, required.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Floor name, required.</td>
+</tr>
+<tr>
+<td>order</td>
+<td>int</td>
+<td>Floor order (optional).</td>
+</tr>
+</tbody></table></p>
+
+<p><h1 id='rooms'>Rooms</h1><h2 id='post-rooms'>Post Rooms</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Creating new rooms:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;post&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;rooms&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Bedroom&quot;</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565868481659-121&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Updating room&#39;s image</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;post&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;rooms&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;roomid&quot;</span><span class="p">:</span><span class="s2">&quot;cvOevxDHRJvn2QdH3Z7bN1fffLcVUb66&quot;</span><span class="w">
+            </span><span class="s2">&quot;image&quot;</span><span class="p">:</span><span class="s2">&quot;https://media.staging.lumi.vn/uploads/images/201908/tmpphpeq477h-1565084097.jpg&quot;</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565868481659-121&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses for creating new rooms or updating current rooms. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>roomid</td>
+<td>string</td>
+<td>Room identifier, omitted when creating new room.</td>
+</tr>
+<tr>
+<td>floorid</td>
+<td>string</td>
+<td>Floor identifier in which room located, required when creating new floor.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Room name, required when creating new floor.</td>
+</tr>
+<tr>
+<td>image</td>
+<td>string</td>
+<td>Room image, (optional).</td>
+</tr>
+<tr>
+<td>order</td>
+<td>int</td>
+<td>Room order (optional).</td>
+</tr>
+<tr>
+<td>sensors</td>
+<td>objects</td>
+<td>Sensors which represent room&#39;s environment information.</td>
+</tr>
+</tbody></table>
+<h3 id='sensors-parameters'>Sensors Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>temperature</td>
+<td>string</td>
+<td>Temperature sensor&#39;s id represent room&#39;s temperature.</td>
+</tr>
+<tr>
+<td>humidity</td>
+<td>string</td>
+<td>Humidity sensor&#39;s id represent room&#39;s humidity.</td>
+</tr>
+<tr>
+<td>lux</td>
+<td>string</td>
+<td>Light sensor&#39;s id represent room&#39;s luminance.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-rooms'>Delete Rooms</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Delete 2 rooms:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;delete&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565867052374-115&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rooms&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">&quot;u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW&quot;</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to delete specified rooms whose roomid match data member. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h2 id='get-rooms'>Get Rooms</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Get 2 rooms:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565867052374-115&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rooms&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">&quot;u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW&quot;</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to get specified rooms&#39; information whose rooms match data member. Get entire <code>rooms</code> data if <code>data</code> is empty. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h2 id='sync-rooms'>Sync Rooms</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Sync rooms</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;sync&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;roomid&quot;</span><span class="p">:</span><span class="s2">&quot;cvOevxDHRJvn2QdH3Z7bN1fffLcVUb66&quot;</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;image&quot;</span><span class="p">:</span><span class="s2">&quot;https://media.staging.lumi.vn/uploads/images/201908/tmpphpeq477h-1565084097.jpg&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Garden&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+            </span><span class="s2">&quot;roomid&quot;</span><span class="p">:</span><span class="s2">&quot;alNRUfHKkSH8b7lrN6muYcZZZQkvpB9N&quot;</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;image&quot;</span><span class="p">:</span><span class="s2">&quot;https://media.staging.lumi.vn/uploads/images/201908/tmpphpoigwmu-1565084405.jpg&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Kitchen&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+            </span><span class="s2">&quot;roomid&quot;</span><span class="p">:</span><span class="s2">&quot;krIPgks22PylMXzWLfZrDCxYaItOHNEz&quot;</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;image&quot;</span><span class="p">:</span><span class="s2">&quot;https://media.staging.lumi.vn/uploads/images/201908/tmpphpsoofio-1565084513.jpg&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Livingroom&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+            </span><span class="s2">&quot;roomid&quot;</span><span class="p">:</span><span class="s2">&quot;ZVgCqAPTHkCIsveYyNFXhrqIGUCHNAFx&quot;</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;image&quot;</span><span class="p">:</span><span class="s2">&quot;https://media.staging.lumi.vn/uploads/images/201908/tmpphp1su9nc-1565085429.jpg&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Bathroom&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+            </span><span class="s2">&quot;roomid&quot;</span><span class="p">:</span><span class="s2">&quot;ZUfBPp8kqd0gZgSC6g9xjxVr3qf16tof&quot;</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;image&quot;</span><span class="p">:</span><span class="s2">&quot;https://media.staging.lumi.vn/uploads/images/201908/tmpphpslju9n-1565860953.jpg&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Office&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;order&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+            </span><span class="s2">&quot;roomid&quot;</span><span class="p">:</span><span class="s2">&quot;dLfBAFYdD4ShUxw5OuNx829Wmcgt9o0k&quot;</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Bedroom&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;rooms&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;versions&quot;</span><span class="p">:</span><span class="mi">47</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565868481659-121&quot;</span><span class="p">,</span><span class="s2">&quot;source&quot;</span><span class="p">:</span><span class="s2">&quot;9c:65:f9:21:f2:a3&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to sync entire <code>rooms</code> data. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>roomid</td>
+<td>string</td>
+<td>Room identifier, required.</td>
+</tr>
+<tr>
+<td>floorid</td>
+<td>string</td>
+<td>Floor identifier in which room located, required.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Room name, required.</td>
+</tr>
+<tr>
+<td>image</td>
+<td>string</td>
+<td>Room image, optional.</td>
+</tr>
+<tr>
+<td>order</td>
+<td>int</td>
+<td>Room order, optional.</td>
+</tr>
+<tr>
+<td>sensors</td>
+<td>objects</td>
+<td>Sensors which represent room&#39;s environment information, optional.</td>
+</tr>
+</tbody></table>
+<h3 id='sensors-parameters-2'>Sensors Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>temperature</td>
+<td>string</td>
+<td>Temperature sensor&#39;s id represent room&#39;s temperature.</td>
+</tr>
+<tr>
+<td>humidity</td>
+<td>string</td>
+<td>Humidity sensor&#39;s id represent room&#39;s humidity.</td>
+</tr>
+<tr>
+<td>lux</td>
+<td>string</td>
+<td>Light sensor&#39;s id represent room&#39;s luminance.</td>
+</tr>
+</tbody></table>
+<h2 id='response-rooms'>Response Rooms</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Response floors</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;response&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;floors&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;roomid&quot;</span><span class="p">:</span><span class="s2">&quot;cvOevxDHRJvn2QdH3Z7bN1fffLcVUb66&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;floorid&quot;</span><span class="p">:</span><span class="s2">&quot;kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;image&quot;</span><span class="p">:</span><span class="s2">&quot;https://media.staging.lumi.vn/uploads/images/201908/tmpphpeq477h-1565084097.jpg&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Garden&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="s2">&quot;versions&quot;</span><span class="p">:</span><span class="mi">47</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565867052374-115&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to sync part of <code>rooms</code> database. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>roomid</td>
+<td>string</td>
+<td>Room identifier, required.</td>
+</tr>
+<tr>
+<td>floorid</td>
+<td>string</td>
+<td>Floor identifier in which room located, required.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Room name, required.</td>
+</tr>
+<tr>
+<td>image</td>
+<td>string</td>
+<td>Room image, optional.</td>
+</tr>
+<tr>
+<td>order</td>
+<td>int</td>
+<td>Room order, optional.</td>
+</tr>
+<tr>
+<td>sensors</td>
+<td>objects</td>
+<td>Sensors which represent room&#39;s environment information, optional.</td>
+</tr>
+</tbody></table>
+<h3 id='sensors-parameters-3'>Sensors Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>temperature</td>
+<td>string</td>
+<td>Temperature sensor&#39;s id represent room&#39;s temperature.</td>
+</tr>
+<tr>
+<td>humidity</td>
+<td>string</td>
+<td>Humidity sensor&#39;s id represent room&#39;s humidity.</td>
+</tr>
+<tr>
+<td>lux</td>
+<td>string</td>
+<td>Light sensor&#39;s id represent room&#39;s luminance.</td>
+</tr>
+</tbody></table></p>
+
+<p><h1 id='groups'>Groups</h1><h2 id='post-groups'>Post Groups</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Creating new groups:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;post&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;groups&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;enable&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Group 3&quot;</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565940979638-85&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Disable group</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;post&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;groups&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;groupid&quot;</span><span class="p">:</span><span class="s2">&quot;07WfsFGuXo0Y0NmIgygBvdMyPin9Kg1I&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;enable&quot;</span><span class="p">:</span><span class="mi">0</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565940723938-77&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses for creating new groups or updating current groups. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupid</td>
+<td>string</td>
+<td>Group identifier, omitted when creating new group.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Group name, required when creating new floor.</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>string</td>
+<td>Group enable, required when creating new floor.</td>
+</tr>
+</tbody></table>
+<h2 id='delete-groups'>Delete Groups</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Delete 2 groups:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;delete&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;groups&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[</span><span class="w">
+            </span><span class="s2">&quot;07WfsFGuXo0Y0NmIgygBvdMyPin9Kg1I&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW&quot;</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565940857971-81&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to delete specified groups whose groupid match data member. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h2 id='get-groups'>Get Groups</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Get 2 groups:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;get&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565867052374-115&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;groups&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">&quot;u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW&quot;</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to get specified groups&#39; information whose groups match data member. Get entire <code>groups</code> data if <code>data</code> is empty. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h2 id='sync-groups'>Sync Groups</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Sync groups</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;sync&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;enable&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;groupid&quot;</span><span class="p">:</span><span class="s2">&quot;SdZSAFIoJsyToLs3yevPgwBrYBgvrNEH&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Group 1&quot;</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+            </span><span class="s2">&quot;enable&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;groupid&quot;</span><span class="p">:</span><span class="s2">&quot;ugzvKPKCmD4GYMR2dUiJMjww4Kh7dXqX&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Group 2&quot;</span><span class="w">
+        </span><span class="p">},{</span><span class="w">
+            </span><span class="s2">&quot;enable&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;groupid&quot;</span><span class="p">:</span><span class="s2">&quot;07WfsFGuXo0Y0NmIgygBvdMyPin9Kg1I&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Group 3&quot;</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;groups&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;versions&quot;</span><span class="p">:</span><span class="mi">57</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565940723938-77&quot;</span><span class="p">,</span><span class="s2">&quot;source&quot;</span><span class="p">:</span><span class="s2">&quot;9c:65:f9:21:f2:a3&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to sync entire <code>groups</code> data. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='parameters-2'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupid</td>
+<td>string</td>
+<td>Group identifier, omitted when creating new group.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Group name, required when creating new floor.</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>string</td>
+<td>Group enable, required when creating new floor.</td>
+</tr>
+</tbody></table>
+<h2 id='response-groups'>Response Groups</h2>
+<blockquote>
+<p>Topic</p>
+</blockquote>
+<pre class="highlight plaintext"><code>Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+</code></pre>
+<blockquote>
+<p>Response floors</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;response&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;floors&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;enable&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;groupid&quot;</span><span class="p">:</span><span class="s2">&quot;SdZSAFIoJsyToLs3yevPgwBrYBgvrNEH&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Group 1&quot;</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="s2">&quot;versions&quot;</span><span class="p">:</span><span class="mi">47</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565867052374-115&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses to sync part of <code>groups</code> database. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>groupid</td>
+<td>string</td>
+<td>Group identifier, omitted when creating new group.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Group name, required when creating new floor.</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>string</td>
+<td>Group enable, required when creating new floor.</td>
+</tr>
+</tbody></table></p>
+<h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="json">json</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
