@@ -1,0 +1,200 @@
+# Floors
+
+## Post Floors
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+
+> Creating new floor:
+
+```json
+{
+    "cmd":"post",
+    "objects":[{
+        "type":"floors",
+        "data":[{
+            "name":"2nd floor"
+        }]
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565866950330-114"
+}
+```
+
+> Updating current floors' order
+
+```json
+{
+    "cmd":"post",
+    "objects":[{
+        "type":"floors",
+        "data":[{
+            "floorid":"aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv",
+            "order":1
+        },{
+            "floorid":"kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW",
+            "order":2
+        },{
+            "floorid":"u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L",
+            "order":3
+        }]
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565867052374-115"
+}
+```
+
+This message uses for creating new floors or updating current floors. Response to this request with `sync` or `response` message.
+
+### Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+floorid | string | Floor identifier, omitted when creating new floor.
+name | string | Floor name, required when creating new floor.
+order | int | Floor order (optional).
+
+## Delete Floors
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+
+> Delete 2 floors:
+
+```json
+{
+    "cmd": "delete",
+    "reqid": "ios-Samsung Galaxy S10+-1565867052374-115",
+    "objects": [{
+        "type": "floors",
+        "data": [
+            "u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L",
+            "kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW"
+        ]
+    }]
+}
+```
+
+This message uses to delete specified floors whose floorid match data member. Response to this request with `sync` or `response` message.
+
+## Get Floors
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+
+> Get 2 floors:
+
+```json
+{
+    "cmd": "get",
+    "reqid": "ios-Samsung Galaxy S10+-1565867052374-115",
+    "objects": [{
+        "type": "floors",
+        "data": [
+            "u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L",
+            "kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW"
+        ]
+    }]
+}
+```
+
+This message uses to get specified floors' information whose floorid match data member. Get entire `floors` data if `data` is empty. Response to this request with `sync` or `response` message.
+
+## Sync Floors
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+
+> Sync floors
+
+```json
+{
+    "cmd":"sync",
+    "objects":[{
+        "type":"floors",
+        "data":[{
+            "floorid":"aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv",
+            "name":"1st floor",
+            "order":1
+        },{
+            "floorid":"kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW",
+            "name":"Basement",
+            "order":2
+        },{
+            "floorid":"u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L",
+            "name":"2nd floor",
+            "order":3
+        }],
+        "versions":67
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565867052374-115"
+}
+```
+
+This message uses to sync entire `floors` data. Key `versions` added for versions control purpose.
+
+### Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+floorid | string | Floor identifier, required.
+name | string | Floor name, required.
+order | int | Floor order (optional).
+
+## Response Floors
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+> Response floors
+
+```json
+{
+    "cmd":"response",
+    "objects":[{
+        "type":"floors",
+        "data":[{
+            "floorid":"aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv",
+            "name":"1st floor",
+            "order":1
+        }],
+        "versions":67
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565867052374-115"
+}
+```
+
+This message uses to sync part of `floors` database. Key `versions` added for versions control purpose.
+
+
+### Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+floorid | string | Floor identifier, required.
+name | string | Floor name, required.
+order | int | Floor order (optional).
+
+

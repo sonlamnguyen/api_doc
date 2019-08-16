@@ -1,0 +1,245 @@
+# Rooms
+
+## Post Rooms
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+> Creating new rooms:
+
+```json
+{
+    "cmd":"post",
+    "objects":[{
+        "type":"rooms",
+        "data":[{
+            "floorid":"aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv",
+            "name":"Bedroom"
+        }]
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565868481659-121"
+}
+```
+
+> Updating room's image
+
+```json
+{
+    "cmd":"post",
+    "objects":[{
+        "type":"rooms",
+        "data":[{
+            "roomid":"cvOevxDHRJvn2QdH3Z7bN1fffLcVUb66"
+            "image":"https://media.staging.lumi.vn/uploads/images/201908/tmpphpeq477h-1565084097.jpg"
+        }]
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565868481659-121"
+}
+```
+
+This message uses for creating new rooms or updating current rooms. Response to this request with `sync` or `response` message.
+
+### Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+roomid | string | Room identifier, omitted when creating new room.
+floorid | string | Floor identifier in which room located, required when creating new floor.
+name | string | Room name, required when creating new floor.
+image | string | Room image, (optional).
+order | int | Room order (optional).
+sensors | objects | Sensors which represent room's environment information.
+
+### Sensors Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+temperature | string | Temperature sensor's id represent room's temperature.
+humidity | string | Humidity sensor's id represent room's humidity.
+lux | string | Light sensor's id represent room's luminance.
+
+## Delete Rooms
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+> Delete 2 rooms:
+
+```json
+{
+    "cmd": "delete",
+    "reqid": "ios-Samsung Galaxy S10+-1565867052374-115",
+    "objects": [{
+        "type": "rooms",
+        "data": [
+            "u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L",
+            "kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW"
+        ]
+    }]
+}
+```
+
+This message uses to delete specified rooms whose roomid match data member. Response to this request with `sync` or `response` message.
+
+## Get Rooms
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+> Get 2 rooms:
+
+```json
+{
+    "cmd": "get",
+    "reqid": "ios-Samsung Galaxy S10+-1565867052374-115",
+    "objects": [{
+        "type": "rooms",
+        "data": [
+            "u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L",
+            "kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW"
+        ]
+    }]
+}
+```
+
+This message uses to get specified rooms' information whose rooms match data member. Get entire `rooms` data if `data` is empty. Response to this request with `sync` or `response` message.
+
+## Sync Rooms
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+> Sync rooms
+
+```json
+{
+    "cmd":"sync",
+    "objects":[{
+        "data":[{
+            "roomid":"cvOevxDHRJvn2QdH3Z7bN1fffLcVUb66"
+            "floorid":"kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW",
+            "image":"https://media.staging.lumi.vn/uploads/images/201908/tmpphpeq477h-1565084097.jpg",
+            "name":"Garden",
+        },{
+            "roomid":"alNRUfHKkSH8b7lrN6muYcZZZQkvpB9N"
+            "floorid":"aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv",
+            "image":"https://media.staging.lumi.vn/uploads/images/201908/tmpphpoigwmu-1565084405.jpg",
+            "name":"Kitchen",
+            "order":2,
+        },{
+            "roomid":"krIPgks22PylMXzWLfZrDCxYaItOHNEz"
+            "floorid":"aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv",
+            "image":"https://media.staging.lumi.vn/uploads/images/201908/tmpphpsoofio-1565084513.jpg",
+            "name":"Livingroom",
+            "order":1,
+        },{
+            "roomid":"ZVgCqAPTHkCIsveYyNFXhrqIGUCHNAFx"
+            "floorid":"aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv",
+            "image":"https://media.staging.lumi.vn/uploads/images/201908/tmpphp1su9nc-1565085429.jpg",
+            "name":"Bathroom",
+            "order":3,
+        },{
+            "roomid":"ZUfBPp8kqd0gZgSC6g9xjxVr3qf16tof"
+            "floorid":"aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv",
+            "image":"https://media.staging.lumi.vn/uploads/images/201908/tmpphpslju9n-1565860953.jpg",
+            "name":"Office",
+            "order":4,
+        },{
+            "roomid":"dLfBAFYdD4ShUxw5OuNx829Wmcgt9o0k"
+            "floorid":"aoZnCwUwP1ruGCzFJpGytCQkgmCkLjKv",
+            "name":"Bedroom",
+        }],
+        "type":"rooms",
+        "versions":47
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565868481659-121","source":"9c:65:f9:21:f2:a3"
+}
+```
+
+This message uses to sync entire `rooms` data. Key `versions` added for versions control purpose.
+
+### Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+roomid | string | Room identifier, required.
+floorid | string | Floor identifier in which room located, required.
+name | string | Room name, required.
+image | string | Room image, optional.
+order | int | Room order, optional.
+sensors | objects | Sensors which represent room's environment information, optional.
+
+### Sensors Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+temperature | string | Temperature sensor's id represent room's temperature.
+humidity | string | Humidity sensor's id represent room's humidity.
+lux | string | Light sensor's id represent room's luminance.
+
+## Response Rooms
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+> Response floors
+
+```json
+{
+    "cmd":"response",
+    "objects":[{
+        "type":"floors",
+        "data":[{
+            "roomid":"cvOevxDHRJvn2QdH3Z7bN1fffLcVUb66",
+            "floorid":"kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW",
+            "image":"https://media.staging.lumi.vn/uploads/images/201908/tmpphpeq477h-1565084097.jpg",
+            "name":"Garden",
+        }],
+        "versions":47
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565867052374-115"
+}
+```
+
+This message uses to sync part of `rooms` database. Key `versions` added for versions control purpose.
+
+### Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+roomid | string | Room identifier, required.
+floorid | string | Floor identifier in which room located, required.
+name | string | Room name, required.
+image | string | Room image, optional.
+order | int | Room order, optional.
+sensors | objects | Sensors which represent room's environment information, optional.
+
+### Sensors Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+temperature | string | Temperature sensor's id represent room's temperature.
+humidity | string | Humidity sensor's id represent room's humidity.
+lux | string | Light sensor's id represent room's luminance.
+
+

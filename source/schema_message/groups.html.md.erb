@@ -1,0 +1,190 @@
+# Groups
+
+## Post Groups
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+> Creating new groups:
+
+```json
+{
+    "cmd":"post",
+    "objects":[{
+        "type":"groups",
+        "data":[{
+            "enable":1,
+            "name":"Group 3"
+        }]
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565940979638-85"
+}
+```
+
+> Disable group
+
+```json
+{
+    "cmd":"post",
+    "objects":[{
+        "type":"groups",
+        "data":[{
+            "groupid":"07WfsFGuXo0Y0NmIgygBvdMyPin9Kg1I",
+            "enable":0
+        }]
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565940723938-77"
+}
+```
+
+This message uses for creating new groups or updating current groups. Response to this request with `sync` or `response` message.
+
+### Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+groupid | string | Group identifier, omitted when creating new group.
+name | string | Group name, required when creating new floor.
+enable | string | Group enable, required when creating new floor.
+
+## Delete Groups
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+> Delete 2 groups:
+
+```json
+{
+    "cmd":"delete",
+    "objects":[{
+        "type":"groups",
+        "data":[
+            "07WfsFGuXo0Y0NmIgygBvdMyPin9Kg1I",
+            "kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW"
+        ]
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565940857971-81"
+}
+```
+
+This message uses to delete specified groups whose groupid match data member. Response to this request with `sync` or `response` message.
+
+## Get Groups
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+> Get 2 groups:
+
+```json
+{
+    "cmd": "get",
+    "reqid": "ios-Samsung Galaxy S10+-1565867052374-115",
+    "objects": [{
+        "type": "groups",
+        "data": [
+            "u7PqzLgeGiSUHEAeLN5snDmAxG2PRw6L",
+            "kdgrHkzJjTisGm8JgaiYYQItsEhSoWfW"
+        ]
+    }]
+}
+```
+
+This message uses to get specified groups' information whose groups match data member. Get entire `groups` data if `data` is empty. Response to this request with `sync` or `response` message.
+
+## Sync Groups
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+> Sync groups
+
+```json
+{
+    "cmd":"sync",
+    "objects":[{
+        "data":[{
+            "enable":1,
+            "groupid":"SdZSAFIoJsyToLs3yevPgwBrYBgvrNEH",
+            "name":"Group 1"
+        },{
+            "enable":1,
+            "groupid":"ugzvKPKCmD4GYMR2dUiJMjww4Kh7dXqX",
+            "name":"Group 2"
+        },{
+            "enable":0,
+            "groupid":"07WfsFGuXo0Y0NmIgygBvdMyPin9Kg1I",
+            "name":"Group 3"
+        }],
+        "type":"groups",
+        "versions":57
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565940723938-77","source":"9c:65:f9:21:f2:a3"
+}
+```
+
+This message uses to sync entire `groups` data. Key `versions` added for versions control purpose.
+
+### Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+groupid | string | Group identifier, omitted when creating new group.
+name | string | Group name, required when creating new floor.
+enable | string | Group enable, required when creating new floor.
+
+## Response Groups
+
+> Topic
+
+```
+Format:  lrn/hc/config
+Example: lrn:luci:vn-hn:5/thing/99/hc/config
+```
+
+> Response floors
+
+```json
+{
+    "cmd":"response",
+    "objects":[{
+        "type":"floors",
+        "data":[{
+            "enable":1,
+            "groupid":"SdZSAFIoJsyToLs3yevPgwBrYBgvrNEH",
+            "name":"Group 1"
+        }],
+        "versions":47
+    }],
+    "reqid":"ios-Samsung Galaxy S10+-1565867052374-115"
+}
+```
+
+This message uses to sync part of `groups` database. Key `versions` added for versions control purpose.
+
+### Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+groupid | string | Group identifier, omitted when creating new group.
+name | string | Group name, required when creating new floor.
+enable | string | Group enable, required when creating new floor.
+
+
