@@ -59,7 +59,6 @@ end
 
 
 # Global Variables
-set :api_local, 'http://frontend.lumi'
-config[:api_local]
+set :reqid, 'ios-Samsung Galaxy S10+-1565866950330-114'
+config[:reqid]
 
-set :env_1, 'abc'

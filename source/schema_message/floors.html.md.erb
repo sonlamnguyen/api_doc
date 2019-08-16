@@ -21,7 +21,7 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
             "name":"2nd floor"
         }]
     }],
-    "reqid":"ios-Samsung Galaxy S10+-1565866950330-114"
+    "reqid":"<%= config[:reqid] %>"
 }
 ```
 
@@ -43,7 +43,7 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
             "order":3
         }]
     }],
-    "reqid":"ios-Samsung Galaxy S10+-1565867052374-115"
+    "reqid":"<%= config[:reqid] %>"
 }
 ```
 
@@ -72,7 +72,7 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 ```json
 {
     "cmd": "delete",
-    "reqid": "ios-Samsung Galaxy S10+-1565867052374-115",
+    "reqid": "<%= config[:reqid] %>",
     "objects": [{
         "type": "floors",
         "data": [
@@ -100,7 +100,7 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 ```json
 {
     "cmd": "get",
-    "reqid": "ios-Samsung Galaxy S10+-1565867052374-115",
+    "reqid": "<%= config[:reqid] %>",
     "objects": [{
         "type": "floors",
         "data": [
@@ -145,7 +145,7 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
         }],
         "versions":67
     }],
-    "reqid":"ios-Samsung Galaxy S10+-1565867052374-115"
+    "reqid":"<%= config[:reqid] %>"
 }
 ```
 
@@ -182,7 +182,7 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
         }],
         "versions":67
     }],
-    "reqid":"ios-Samsung Galaxy S10+-1565867052374-115"
+    "reqid":"<%= config[:reqid] %>"
 }
 ```
 
