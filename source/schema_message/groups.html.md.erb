@@ -2,13 +2,6 @@
 
 ## Post Groups
 
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
-
 > Creating new groups:
 
 ```json
@@ -43,6 +36,11 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses for creating new groups or updating current groups. Response to this request with `sync` or `response` message.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ### Parameters
 
 Key | Type | Description
@@ -52,13 +50,6 @@ name | string | Group name, required when creating new floor.
 enable | string | Group enable, required when creating new floor.
 
 ## Delete Groups
-
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
 
 > Delete 2 groups:
 
@@ -78,14 +69,12 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses to delete specified groups whose groupid match data member. Response to this request with `sync` or `response` message.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ## Get Groups
-
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
 
 > Get 2 groups:
 
@@ -105,14 +94,12 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses to get specified groups' information whose groups match data member. Get entire `groups` data if `data` is empty. Response to this request with `sync` or `response` message.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ## Sync Groups
-
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
 
 > Sync groups
 
@@ -142,6 +129,11 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses to sync entire `groups` data. Key `versions` added for versions control purpose.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ### Parameters
 
 Key | Type | Description
@@ -151,13 +143,6 @@ name | string | Group name, required when creating new floor.
 enable | string | Group enable, required when creating new floor.
 
 ## Response Groups
-
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
 
 > Response floors
 
@@ -178,6 +163,11 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 ```
 
 This message uses to sync part of `groups` database. Key `versions` added for versions control purpose.
+
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
 
 ### Parameters
 

@@ -2,13 +2,6 @@
 
 ## Post Rooms
 
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
-
 > Creating new rooms:
 
 ```json
@@ -43,6 +36,11 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses for creating new rooms or updating current rooms. Response to this request with `sync` or `response` message.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ### Parameters
 
 Key | Type | Description
@@ -64,13 +62,6 @@ lux | string | Light sensor's id represent room's luminance.
 
 ## Delete Rooms
 
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
-
 > Delete 2 rooms:
 
 ```json
@@ -89,14 +80,12 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses to delete specified rooms whose roomid match data member. Response to this request with `sync` or `response` message.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ## Get Rooms
-
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
 
 > Get 2 rooms:
 
@@ -116,14 +105,12 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses to get specified rooms' information whose rooms match data member. Get entire `rooms` data if `data` is empty. Response to this request with `sync` or `response` message.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ## Sync Rooms
-
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
 
 > Sync rooms
 
@@ -174,6 +161,11 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses to sync entire `rooms` data. Key `versions` added for versions control purpose.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ### Parameters
 
 Key | Type | Description
@@ -194,13 +186,6 @@ humidity | string | Humidity sensor's id represent room's humidity.
 lux | string | Light sensor's id represent room's luminance.
 
 ## Response Rooms
-
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
 
 > Response floors
 
@@ -223,6 +208,11 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses to sync part of `rooms` database. Key `versions` added for versions control purpose.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ### Parameters
 
 Key | Type | Description
@@ -241,5 +231,3 @@ Key | Type | Description
 temperature | string | Temperature sensor's id represent room's temperature.
 humidity | string | Humidity sensor's id represent room's humidity.
 lux | string | Light sensor's id represent room's luminance.
-
-

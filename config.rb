@@ -61,4 +61,16 @@ end
 # Global Variables
 set :reqid, 'ios-Samsung Galaxy S10+-1565866950330-114'
 config[:reqid]
+set :topic_format_config, 'lrn/hc/config'
+config[:topic_format_config]
+set :topic_example_config, 'lrn:luci:vn-hn:5/thing/99/hc/config'
+config[:topic_example_config]
+set :topic_format_control, 'lrn/hc/control'
+config[:topic_format_control]
+set :topic_example_control, 'lrn:luci:vn-hn:5/thing/99/hc/control'
+config[:topic_example_control]
+set :topic_format_status, 'lrn/hc/status'
+config[:topic_format_status]
+set :topic_example_status, 'lrn:luci:vn-hn:5/thing/99/hc/status'
+config[:topic_example_status]
 

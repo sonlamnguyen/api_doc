@@ -2,14 +2,6 @@
 
 ## Post Floors
 
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
-
-
 > Creating new floor:
 
 ```json
@@ -49,6 +41,11 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses for creating new floors or updating current floors. Response to this request with `sync` or `response` message.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ### Parameters
 
 Key | Type | Description
@@ -58,14 +55,6 @@ name | string | Floor name, required when creating new floor.
 order | int | Floor order (optional).
 
 ## Delete Floors
-
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
-
 
 > Delete 2 floors:
 
@@ -85,15 +74,12 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses to delete specified floors whose floorid match data member. Response to this request with `sync` or `response` message.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ## Get Floors
-
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
-
 
 > Get 2 floors:
 
@@ -113,15 +99,12 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses to get specified floors' information whose floorid match data member. Get entire `floors` data if `data` is empty. Response to this request with `sync` or `response` message.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ## Sync Floors
-
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
-
 
 > Sync floors
 
@@ -151,6 +134,11 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses to sync entire `floors` data. Key `versions` added for versions control purpose.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
 ### Parameters
 
 Key | Type | Description
@@ -160,13 +148,6 @@ name | string | Floor name, required.
 order | int | Floor order (optional).
 
 ## Response Floors
-
-> Topic
-
-```
-Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-```
 
 > Response floors
 
@@ -188,6 +169,10 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 This message uses to sync part of `floors` database. Key `versions` added for versions control purpose.
 
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
 
 ### Parameters
 

@@ -1,0 +1,60 @@
+# Net Setup
+
+## Set Join
+
+> Enable Zigbee devices discovery
+
+```json
+{
+    "cmd":"set",
+    "objects":[{
+        "type":"join",
+        "data":[{
+            "machc":"9c:65:f9:21:f2:a3"
+            "brigde_key":"zigbee",
+            "action":1,
+        }]
+    }],
+    "reqid":"<%= config[:reqid] %>"
+}
+```
+
+> Discover Zigbee devices using install key
+
+```json
+{
+    "cmd":"set",
+    "objects":[{
+        "type":"join",
+        "data":[{
+            "brigde_key":"zigbee",
+            "action":1,
+            "machc":"9c:65:f9:21:f2:a3",
+            "param":[{
+                "deviceEui":"000B57FFFE4F48BC",
+                "installCodeKey":"01C71A5E7E7831E59F2554CEDC6FEA7828C8",
+                "Manufacture":"0000",
+                "Model":"LM-SZ1"
+            }]
+        }]
+    }],
+    "reqid":"<%= config[:reqid] %>"
+}
+```
+
+This message uses for starting or stopping devices discovery feature on specified bridge. Response to this request with `status devices_join` message.
+
+### Topic
+
+Format:  `<%= config[:topic_format_config] %>`</br>
+Example: `<%= config[:topic_example_config] %>`
+
+### Parameters
+
+Key | Type | Description
+--- | ---- | -----------
+machc | string | HC to perform discovery action on, required.
+brigde_key | string | Bridge to perform discovery action on, required.
+action | int | Discovery action, valid value are 0 (stop) and 1 (start), required.
+param | object | Information provided for Zigbee discovery session, optional.
+value | object | Information provided for Zwave discovery session, optional.
