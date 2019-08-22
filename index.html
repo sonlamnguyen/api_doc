@@ -282,6 +282,14 @@
               </ul>
           </li>
           <li>
+            <a href="#net-setup" class="toc-h1 toc-link" data-title="Net Setup">Net Setup</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#set-join" class="toc-h2 toc-link" data-title="Set Join">Set Join</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -301,12 +309,6 @@
 <p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
 
 <p><h1 id='floors'>Floors</h1><h2 id='post-floors'>Post Floors</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Creating new floor:</p>
 </blockquote>
@@ -343,6 +345,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses for creating new floors or updating current floors. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters'>Parameters</h3>
 <table><thead>
 <tr>
@@ -369,12 +374,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </tbody></table>
 <h2 id='delete-floors'>Delete Floors</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Delete 2 floors:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -390,13 +389,10 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to delete specified floors whose floorid match data member. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic-2'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h2 id='get-floors'>Get Floors</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Get 2 floors:</p>
 </blockquote>
@@ -413,13 +409,10 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to get specified floors&#39; information whose floorid match data member. Get entire <code>floors</code> data if <code>data</code> is empty. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic-3'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h2 id='sync-floors'>Sync Floors</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Sync floors</p>
 </blockquote>
@@ -446,6 +439,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to sync entire <code>floors</code> data. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='topic-4'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
@@ -472,12 +468,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </tbody></table>
 <h2 id='response-floors'>Response Floors</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Response floors</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -495,6 +485,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to sync part of <code>floors</code> database. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='topic-5'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters-3'>Parameters</h3>
 <table><thead>
 <tr>
@@ -521,12 +514,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </tbody></table></p>
 
 <p><h1 id='rooms'>Rooms</h1><h2 id='post-rooms'>Post Rooms</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Creating new rooms:</p>
 </blockquote>
@@ -558,6 +545,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses for creating new rooms or updating current rooms. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters'>Parameters</h3>
 <table><thead>
 <tr>
@@ -623,12 +613,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </tbody></table>
 <h2 id='delete-rooms'>Delete Rooms</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Delete 2 rooms:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -644,13 +628,10 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to delete specified rooms whose roomid match data member. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic-2'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h2 id='get-rooms'>Get Rooms</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Get 2 rooms:</p>
 </blockquote>
@@ -667,13 +648,10 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to get specified rooms&#39; information whose rooms match data member. Get entire <code>rooms</code> data if <code>data</code> is empty. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic-3'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h2 id='sync-rooms'>Sync Rooms</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Sync rooms</p>
 </blockquote>
@@ -721,6 +699,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to sync entire <code>rooms</code> data. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='topic-4'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
@@ -786,12 +767,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </tbody></table>
 <h2 id='response-rooms'>Response Rooms</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Response floors</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -810,6 +785,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to sync part of <code>rooms</code> database. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='topic-5'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters-3'>Parameters</h3>
 <table><thead>
 <tr>
@@ -876,12 +854,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 
 <p><h1 id='groups'>Groups</h1><h2 id='post-groups'>Post Groups</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Creating new groups:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -912,6 +884,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses for creating new groups or updating current groups. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters'>Parameters</h3>
 <table><thead>
 <tr>
@@ -938,12 +913,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </tbody></table>
 <h2 id='delete-groups'>Delete Groups</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Delete 2 groups:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -959,13 +928,10 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to delete specified groups whose groupid match data member. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic-2'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h2 id='get-groups'>Get Groups</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Get 2 groups:</p>
 </blockquote>
@@ -982,13 +948,10 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to get specified groups&#39; information whose groups match data member. Get entire <code>groups</code> data if <code>data</code> is empty. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic-3'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h2 id='sync-groups'>Sync Groups</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Sync groups</p>
 </blockquote>
@@ -1015,6 +978,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to sync entire <code>groups</code> data. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='topic-4'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
@@ -1041,12 +1007,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </tbody></table>
 <h2 id='response-groups'>Response Groups</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Response floors</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -1064,6 +1024,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to sync part of <code>groups</code> database. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='topic-5'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters-3'>Parameters</h3>
 <table><thead>
 <tr>
@@ -1086,6 +1049,84 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 <td>enable</td>
 <td>string</td>
 <td>Group enable, required when creating new floor.</td>
+</tr>
+</tbody></table></p>
+
+<p><h1 id='net-setup'>Net Setup</h1><h2 id='set-join'>Set Join</h2>
+<blockquote>
+<p>Enable Zigbee devices discovery</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;set&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;join&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;machc&quot;</span><span class="p">:</span><span class="s2">&quot;9c:65:f9:21:f2:a3&quot;</span><span class="w">
+            </span><span class="s2">&quot;brigde_key&quot;</span><span class="p">:</span><span class="s2">&quot;zigbee&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;action&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565866950330-114&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Discover Zigbee devices using install key</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">&quot;cmd&quot;</span><span class="p">:</span><span class="s2">&quot;set&quot;</span><span class="p">,</span><span class="w">
+    </span><span class="s2">&quot;objects&quot;</span><span class="p">:[{</span><span class="w">
+        </span><span class="s2">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;join&quot;</span><span class="p">,</span><span class="w">
+        </span><span class="s2">&quot;data&quot;</span><span class="p">:[{</span><span class="w">
+            </span><span class="s2">&quot;brigde_key&quot;</span><span class="p">:</span><span class="s2">&quot;zigbee&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;action&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;machc&quot;</span><span class="p">:</span><span class="s2">&quot;9c:65:f9:21:f2:a3&quot;</span><span class="p">,</span><span class="w">
+            </span><span class="s2">&quot;param&quot;</span><span class="p">:[{</span><span class="w">
+                </span><span class="s2">&quot;deviceEui&quot;</span><span class="p">:</span><span class="s2">&quot;000B57FFFE4F48BC&quot;</span><span class="p">,</span><span class="w">
+                </span><span class="s2">&quot;installCodeKey&quot;</span><span class="p">:</span><span class="s2">&quot;01C71A5E7E7831E59F2554CEDC6FEA7828C8&quot;</span><span class="p">,</span><span class="w">
+                </span><span class="s2">&quot;Manufacture&quot;</span><span class="p">:</span><span class="s2">&quot;0000&quot;</span><span class="p">,</span><span class="w">
+                </span><span class="s2">&quot;Model&quot;</span><span class="p">:</span><span class="s2">&quot;LM-SZ1&quot;</span><span class="w">
+            </span><span class="p">}]</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}],</span><span class="w">
+    </span><span class="s2">&quot;reqid&quot;</span><span class="p">:</span><span class="s2">&quot;ios-Samsung Galaxy S10+-1565866950330-114&quot;</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This message uses for starting or stopping devices discovery feature on specified bridge. Response to this request with <code>status devices_join</code> message.</p>
+<h3 id='topic'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
+<h3 id='parameters'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>machc</td>
+<td>string</td>
+<td>HC to perform discovery action on, required.</td>
+</tr>
+<tr>
+<td>brigde_key</td>
+<td>string</td>
+<td>Bridge to perform discovery action on, required.</td>
+</tr>
+<tr>
+<td>action</td>
+<td>int</td>
+<td>Discovery action, valid value are 0 (stop) and 1 (start), required.</td>
+</tr>
+<tr>
+<td>param</td>
+<td>object</td>
+<td>Information provided for Zigbee discovery session, optional.</td>
+</tr>
+<tr>
+<td>value</td>
+<td>object</td>
+<td>Information provided for Zwave discovery session, optional.</td>
 </tr>
 </tbody></table></p>
 <h1 id='errors'>Errors</h1>

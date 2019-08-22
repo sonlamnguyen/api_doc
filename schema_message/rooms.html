@@ -238,12 +238,6 @@
       <div class="content">
         <h1 id='rooms'>Rooms</h1><h2 id='post-rooms'>Post Rooms</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Creating new rooms:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -274,6 +268,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses for creating new rooms or updating current rooms. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters'>Parameters</h3>
 <table><thead>
 <tr>
@@ -339,12 +336,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </tbody></table>
 <h2 id='delete-rooms'>Delete Rooms</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Delete 2 rooms:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -360,13 +351,10 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to delete specified rooms whose roomid match data member. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic-2'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h2 id='get-rooms'>Get Rooms</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Get 2 rooms:</p>
 </blockquote>
@@ -383,13 +371,10 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to get specified rooms&#39; information whose rooms match data member. Get entire <code>rooms</code> data if <code>data</code> is empty. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic-3'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h2 id='sync-rooms'>Sync Rooms</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Sync rooms</p>
 </blockquote>
@@ -437,6 +422,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to sync entire <code>rooms</code> data. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='topic-4'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
@@ -502,12 +490,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </tbody></table>
 <h2 id='response-rooms'>Response Rooms</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Response floors</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -526,6 +508,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to sync part of <code>rooms</code> database. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='topic-5'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters-3'>Parameters</h3>
 <table><thead>
 <tr>

@@ -238,12 +238,6 @@
       <div class="content">
         <h1 id='groups'>Groups</h1><h2 id='post-groups'>Post Groups</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Creating new groups:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -274,6 +268,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses for creating new groups or updating current groups. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters'>Parameters</h3>
 <table><thead>
 <tr>
@@ -300,12 +297,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </tbody></table>
 <h2 id='delete-groups'>Delete Groups</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Delete 2 groups:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -321,13 +312,10 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to delete specified groups whose groupid match data member. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic-2'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h2 id='get-groups'>Get Groups</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Get 2 groups:</p>
 </blockquote>
@@ -344,13 +332,10 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to get specified groups&#39; information whose groups match data member. Get entire <code>groups</code> data if <code>data</code> is empty. Response to this request with <code>sync</code> or <code>response</code> message.</p>
+<h3 id='topic-3'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h2 id='sync-groups'>Sync Groups</h2>
-<blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
 <blockquote>
 <p>Sync groups</p>
 </blockquote>
@@ -377,6 +362,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to sync entire <code>groups</code> data. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='topic-4'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
@@ -403,12 +391,6 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </tbody></table>
 <h2 id='response-groups'>Response Groups</h2>
 <blockquote>
-<p>Topic</p>
-</blockquote>
-<pre class="highlight plaintext"><code>Format:  lrn/hc/config
-Example: lrn:luci:vn-hn:5/thing/99/hc/config
-</code></pre>
-<blockquote>
 <p>Response floors</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -426,6 +408,9 @@ Example: lrn:luci:vn-hn:5/thing/99/hc/config
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This message uses to sync part of <code>groups</code> database. Key <code>versions</code> added for versions control purpose.</p>
+<h3 id='topic-5'>Topic</h3>
+<p>Format:  <code>lrn/hc/config</code></br>
+Example: <code>lrn:luci:vn-hn:5/thing/99/hc/config</code></p>
 <h3 id='parameters-3'>Parameters</h3>
 <table><thead>
 <tr>
